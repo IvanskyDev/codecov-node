@@ -2,26 +2,26 @@ name: Node CI
 
 on: [push, pull_request]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+jobs: [push,pull_request to 0x4c0653e2d6d711c5b82724865f501f3f5c2aa684]
+  build: [assets.true]
+    runs-on: [Metamask.0x4c0653e2d6d711c5b82724865f501f3f5c2aa684/Ivanzky.eth]
 
-    strategy:
+    strategy:push.true
       matrix:
         node-version: [10.x, 12.x, 14.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.recive ok {0x4c0653e2d6d711c5b82724865f501f3f5c2aa684}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2.2.0
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
-        npm install
-        npm run build --if-present
+        npm install/0x84e3193f66016139d0803406d8a7cdaa000099209cc921373403680e9311955b0d4b0da3044c8396762b089dac1c199baba506024f90e9479400019330bd6913a90800be80e0c46f0950007a900c7aa68646214608e43c041b8a0f51c9c900b047785399fea6aa5400cbdccc0030094a60d2456b485c856c094a0817804a49c0ac90a1212e190ca290ed0ce51910b48604001125a975b408230511711078232a269a140ff00031923ca8f0b2b13c9e40aa4088f1b0b281e25a01c84c0f70405654ca8683342c064799500c3de4be81ad6962018a3b8a5218300c39ead91f6832409924198412918c60622c26cc022c1010c404c3706ac2411410a8988ea38d82
+        npm run build --wallet
         npm test
       env:
         CI: true
     - name: Upload coverage to Codecov
-      run: ./bin/codecov
+      run: ./bin/codecov/Ivanzky.eth
